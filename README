@@ -1,0 +1,4 @@
+bnd karaf project launcher plugin
+---------------------------------
+
+A simple prototype bnd plugin which shows how to create a karaf specific bnd project launcher.
