@@ -1,0 +1,8 @@
+Karaf OSGi Framework Factory
+----------------------------
+
+The bundles provides a OSGi framework factory to start Apache Karaf in bnd.
+
+To use the framework factory setup this in the bnd run configuration:
+-runfw: karaf.framework.factory;version='1.0.0'
+-runproperties: karaf.home=/Users/developer/Downloads/apache-karaf-2.2.6
