@@ -1,0 +1,8 @@
+Bundle-SymbolicName: bnd.karaf.launcher
+Bundle-Version: 1.0.1
+Launcher-Plugin: bnd.karaf.launcher.plugin.KarafProjectLauncher
+-buildpath: biz.aQute.bndlib;version=1.51.0,\
+	org.apache.karaf.main;version=2.2.6
+Private-Package: bnd.karaf.launcher.plugin,\
+	bnd.karaf.launcher,\
+	org.apache.karaf.main

@@ -1,0 +1,6 @@
+-runproperties: karaf.home=/Users/developer/Downloads/apache-karaf-2.2.6
+-runpath: bnd.karaf.launcher;version=1.0.0
+Private-Package: demo
+-buildpath: osgi.core;version=4.2.0.200908310645
+Bundle-Activator: demo.Activator
+-runfw: org.eclipse.osgi;version='[3.6.2.R36x_v20110210,3.6.2.R36x_v20110210]'
