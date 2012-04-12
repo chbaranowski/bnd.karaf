@@ -11,6 +11,7 @@ public class KarafFrameworkFactory implements FrameworkFactory {
 	@Override
 	public Framework newFramework(Map configuration) {
 		// the karaf installation folder must be setup
+		// TODO: find a better way to define the karaf.home folder?
 		String karafHomeFolder = (String) configuration.get("karaf.home");
 		if (karafHomeFolder == null) {
 			return null;
@@ -35,10 +36,9 @@ public class KarafFrameworkFactory implements FrameworkFactory {
 		try {
 			main.launch();
 			return main.getFramework();
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (Exception exp) {
+			throw new RuntimeException(exp);
 		}
-		return null;
 	}
 
 }
