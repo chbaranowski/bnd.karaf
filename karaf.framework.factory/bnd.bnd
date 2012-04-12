@@ -1,8 +1,11 @@
 -buildpath: osgi.core;version=4.2.0.200908310645,\
 	org.apache.karaf.main;version=2.2.6,\
 	org.eclipse.osgi;version=3.6.2.R36x_v20110210
-Private-Package: karaf.framework.launch,\
-	org.apache.karaf.main,\
+Private-Package: karaf.framework.launch
+Include-Resource: META-INF/services=src/services
+Bundle-Version: 1.0.2
+Import-Package: *
+Export-Package: org.osgi.framework,\
 	org.osgi.framework,\
 	org.osgi.framework.hooks.service,\
 	org.osgi.framework.launch,\
@@ -12,8 +15,5 @@ Private-Package: karaf.framework.launch,\
 	org.osgi.service.permissionadmin,\
 	org.osgi.service.startlevel,\
 	org.osgi.service.url,\
-	org.osgi.util.tracker
-Include-Resource: META-INF/services=src/services
-Bundle-Version: 1.0.0
-Import-Package: !javax.security.auth.x500,\
-	*
+	org.osgi.util.tracker,\
+	org.apache.karaf.main
