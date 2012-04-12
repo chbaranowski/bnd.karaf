@@ -6,7 +6,6 @@ Include-Resource: META-INF/services=src/services
 Bundle-Version: 1.0.2
 Import-Package: *
 Export-Package: org.osgi.framework,\
-	org.osgi.framework,\
 	org.osgi.framework.hooks.service,\
 	org.osgi.framework.launch,\
 	org.osgi.service.condpermadmin,\
