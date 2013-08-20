@@ -1,9 +1,6 @@
--buildpath: osgi.core;version=4.2.0.200908310645,\
-	org.apache.karaf.main;version=2.2.6,\
-	org.eclipse.osgi;version=3.6.2.R36x_v20110210
-Private-Package: karaf.framework.launch
+-classpath: target/classes
 Include-Resource: META-INF/services=src/services
-Bundle-Version: 1.0.2
+Bundle-Version: 1.0.3
 Import-Package: *
 Export-Package: org.osgi.framework,\
 	org.osgi.framework.hooks.service,\
@@ -15,4 +12,12 @@ Export-Package: org.osgi.framework,\
 	org.osgi.service.startlevel,\
 	org.osgi.service.url,\
 	org.osgi.util.tracker,\
+	org.apache.karaf.info;version=3.0.0.RC1
+-dsannotations: *
+Private-Package: karaf.framework.launch,\
+	org.apache.karaf.main.lock,\
+	org.apache.karaf.main.util,\
 	org.apache.karaf.main
+-runfw: karaf.framework.factory;version='1.0.3'
+-runproperties: karaf.home=/home/frossoni/app/apache-karaf-3.0.0.RC1/
+-runbundles: RemoteService;version='0.0.1'
