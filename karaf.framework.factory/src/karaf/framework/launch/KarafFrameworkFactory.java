@@ -16,15 +16,21 @@ public class KarafFrameworkFactory implements FrameworkFactory {
 		if(!configuration.containsKey("karaf.framework.factory"))
 		  System.setProperty("karaf.framework.factory", "org.apache.felix.framework.FrameworkFactory");
 
+		Main main = new Main(new String[0]);
 		try {
 		  // launch karaf
-		  Main main = new Main(new String[0]);
 			main.launch();
 			
 			Framework framework = main.getFramework();
 			System.out.println("return " + framework);
       return framework;
 		} catch (Throwable exp) {
+		  try {
+        main.destroy();
+      } catch (Exception e) {
+        e.printStackTrace();
+        throw new RuntimeException(e);
+      }
 			exp.printStackTrace();
 		  throw new RuntimeException(exp);
 		}
