@@ -12,12 +12,10 @@ Export-Package: org.osgi.framework,\
 	org.osgi.service.startlevel,\
 	org.osgi.service.url,\
 	org.osgi.util.tracker,\
-	org.apache.karaf.info;version=3.0.0.RC1
+	org.apache.karaf.info,\
+	org.osgi.framework.startlevel
 -dsannotations: *
 Private-Package: karaf.framework.launch,\
 	org.apache.karaf.main.lock,\
 	org.apache.karaf.main.util,\
 	org.apache.karaf.main
--runfw: karaf.framework.factory;version='1.0.3'
--runproperties: karaf.home=/home/frossoni/app/apache-karaf-3.0.0.RC1/
--runbundles: RemoteService;version='0.0.1'

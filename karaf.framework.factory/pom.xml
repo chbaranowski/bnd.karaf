@@ -4,23 +4,22 @@
 	<groupId>karaf.framework.factory</groupId>
 	<artifactId>karaf.framework.factory</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.karaf</groupId>
 			<artifactId>org.apache.karaf.main</artifactId>
 			<version>3.0.0.RC1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.karaf</groupId>
-			<artifactId>org.apache.karaf</artifactId>
-			<version>3.0.0.RC1</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.core</artifactId>
 			<version>5.0.0</version>
 		</dependency>
-		
+
 
 	</dependencies>
 	<build>
@@ -28,6 +27,7 @@
 		<testSourceDirectory>test</testSourceDirectory>
 		<resources>
 			<resource>
+
 				<directory>src</directory>
 				<excludes>
 					<exclude>**/*.java</exclude>
