@@ -1,22 +1,19 @@
 -src:       src
--classpath: target/classes
+#-classpath: target/classes
 Include-Resource: META-INF/services=resources/services
-Bundle-Version: 2.9.0
+Bundle-Version: 3.0.0
 -dsannotations: *
 Export-Package: karaf.framework.launch,\
 	org.osgi.framework.launch;uses:="org.osgi.framework";version="1.1",\
 	org.osgi.framework;uses:="javax.security.auth.x500";version="1.7"
-Private-Package: org.apache.karaf.main.lock,\
-	org.apache.karaf.main.util,\
-	org.apache.karaf.main,\
-	org.osgi.framework.hooks.service,\
+Private-Package: org.osgi.framework.hooks.service,\
 	org.osgi.service.condpermadmin,\
 	org.osgi.service.packageadmin,\
 	org.osgi.service.permissionadmin,\
 	org.osgi.service.startlevel,\
 	org.osgi.service.url,\
 	org.osgi.util.tracker,\
-	org.apache.karaf.info,\
 	org.osgi.framework.startlevel
 -runfw: karaf.framework.factory;version=2.9.0
--runproperties: karaf.home=/home/frossoni/app/apache-karaf-3.0.0.RC1/
+-runproperties: karaf.home=/home/frossoni/app/apache-karaf-3.0.0.RC1/,\
+	args=pippo pluto
