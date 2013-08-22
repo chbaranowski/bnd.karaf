@@ -15,5 +15,4 @@ Private-Package: org.osgi.framework.hooks.service,\
 	org.osgi.util.tracker,\
 	org.osgi.framework.startlevel
 -runfw: karaf.framework.factory;version=2.9.0
--runproperties: karaf.home=/home/frossoni/app/apache-karaf-3.0.0.RC1/,\
-	args=pippo pluto
+-runproperties: karaf.home=/home/frossoni/app/apache-karaf-3.0.0.RC1/
