@@ -1,12 +1,16 @@
+-src:       src
 -classpath: target/classes
-Include-Resource: META-INF/services=src/services
-Bundle-Version: 1.0.3
-Import-Package: *
-Export-Package: org.osgi.framework,\
+Include-Resource: META-INF/services=resources/services
+Bundle-Version: 2.9.0
+-dsannotations: *
+Export-Package: karaf.framework.launch,\
+	org.osgi.framework.launch;uses:="org.osgi.framework";version="1.1",\
+	org.osgi.framework;uses:="javax.security.auth.x500";version="1.7"
+Private-Package: org.apache.karaf.main.lock,\
+	org.apache.karaf.main.util,\
+	org.apache.karaf.main,\
 	org.osgi.framework.hooks.service,\
-	org.osgi.framework.launch,\
 	org.osgi.service.condpermadmin,\
-	org.osgi.service.framework,\
 	org.osgi.service.packageadmin,\
 	org.osgi.service.permissionadmin,\
 	org.osgi.service.startlevel,\
@@ -14,8 +18,5 @@ Export-Package: org.osgi.framework,\
 	org.osgi.util.tracker,\
 	org.apache.karaf.info,\
 	org.osgi.framework.startlevel
--dsannotations: *
-Private-Package: karaf.framework.launch,\
-	org.apache.karaf.main.lock,\
-	org.apache.karaf.main.util,\
-	org.apache.karaf.main
+-runfw: karaf.framework.factory;version=2.9.0
+-runproperties: karaf.home=/home/frossoni/app/apache-karaf-3.0.0.RC1/
